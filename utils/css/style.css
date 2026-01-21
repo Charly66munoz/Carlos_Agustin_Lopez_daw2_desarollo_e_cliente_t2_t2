@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    margin: 0px;
+    color: aliceblue;
+    
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: #020a4b ;
+    box-shadow: -1px 5px 5px #020a4b;
+}
+
+main{
+    display: grid;
+    flex-direction: column;
+    flex: 4;
+    background: linear-gradient(to bottom, #020a4b, #4958cd);
+}
+/*
+Cuando se agregue algo al carrito se creara un grid
+grid-template-columns: 3fr 1fr;
+
+*/
+
+
+footer{
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    background-color: black;
+}
