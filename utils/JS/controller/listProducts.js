@@ -1,10 +1,15 @@
 class ListProducts {
   constructor() {
-    this.items = [];
+    this.listProduct = [];
   }
 
   addProducts(product) {
-    this.items.push(product);
+    this.listProduct.push(product);
+  }
+
+
+  getProducts(){
+    return this.listProduct;
   }
 
 }

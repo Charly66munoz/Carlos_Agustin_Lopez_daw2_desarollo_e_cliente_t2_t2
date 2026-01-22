@@ -6,6 +6,7 @@
     <title>Stranger things</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="utils/css/style.css">
+    <link rel="stylesheet" href="utils/css/cardsStyle.css">
 </head>
 <body >
     <header class="container-fluid pt-2">
@@ -19,18 +20,18 @@
         </div>
     </header>
     <main >
-        <div class="row m-1" id="bodyProducts">
-            <div class="col-12 text-center">
-                <button class="btn btn-warning mt-5" id="btnCargar">Presione para cargar los productos</button>
-
+        <section class="col-12 col-lg-12">
+            <div class="row m-1 justify-content-center align-items-center" id="bodyProducts">
+                <div class="col-12 text-center">
+                    <button class="btn btn-warning mt-5" id="btnCargar">Presione para cargar los productos</button>
+                </div>
+                
+                    
             </div>
-            <!--<section class="col-12">
-                    as
-                </section>
-                <aside class="d-none">
-                    sd
-                </aside>-->
-        </div>
+        </section>
+        <aside class="col-12 col-lg-3 d-none" id="cartAside">
+                  fff  
+        </aside>
     </main>
     
     <script src="utils/JS/entity/product.js"></script>

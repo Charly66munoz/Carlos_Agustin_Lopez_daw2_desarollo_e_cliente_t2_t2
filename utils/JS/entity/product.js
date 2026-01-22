@@ -1,40 +1,65 @@
 class Product{
+    title;
     img;
     price;
-    categoria;
-    marca
+    category;
+    brand;
 
-
-    constructor(img, price, categoria, marca){
+    
+    constructor(title,img, price, category, brand)
+    {
+        this.title = title;
         this.img = img;
         this.price = price;
-        this.categoria = categoria;
-        this.marca = marca;
+        this.category = category;
+        this.brand = brand;
     }
 
-    setImg(img) {
+    setImg(img) 
+    {
         this.img = img; 
     }
-    setCategoria(categoria) {
-        this.categoria = categoria; 
+    setCategory(category) 
+    {
+        this.category = category; 
     }
-    setPrice(price) {
+    setPrice(price)
+    {
         this.price = price; 
     }
-    setMarca(marca) {
-        this.marca = marca; 
+    setMarca(brand) 
+    {
+        this.brand = brand; 
     }
-    getImg(img) {
-        this.img = img; 
+    setTitle(title) 
+    {
+        this.title = title; 
     }
-    getCategoria(categoria) {
-        this.categoria = categoria; 
+
+
+    getImg() 
+    {
+        return this.img;
     }
-    getPrice(price) {
-        this.price = price; 
+    getCategory() 
+    {
+        return this.category;
     }
-    getMarca(marca) {
-        this.marca = marca; 
+    getPrice() 
+    {
+        return this.price;
+    }
+    getPriceComa() 
+    {
+        return String(this.price).replace(".", ",");
+    }
+    getBrand() 
+    {
+        return this.brand; 
+    }
+    getTitle() 
+    {
+        return this.title; 
     }
 
 
