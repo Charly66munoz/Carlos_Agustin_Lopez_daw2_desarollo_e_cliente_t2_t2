@@ -12,7 +12,7 @@ class Cart
 
   getTotal() 
   {
-    return this.items.reduce((total, p) => total + p.price, 0);
+    return `${String(Math.round(this.items.reduce((total, p) => total + p.price, 0) * 100) / 100).replace(".",",")}€`;
   }
 
   clear() 

@@ -1,4 +1,5 @@
 class Product{
+    id;
     title;
     img;
     price;
@@ -6,8 +7,9 @@ class Product{
     brand;
 
     
-    constructor(title,img, price, category, brand)
+    constructor(id,title,img, price, category, brand)
     {
+        this.id = id;
         this.title = title;
         this.img = img;
         this.price = price;
@@ -15,9 +17,9 @@ class Product{
         this.brand = brand;
     }
 
-    setImg(img) 
+    getId()
     {
-        this.img = img; 
+        return this.id;
     }
     setCategory(category) 
     {
@@ -51,7 +53,7 @@ class Product{
     }
     getPriceComa() 
     {
-        return String(this.price).replace(".", ",");
+        return `${String(this.price).replace(".", ",")}€`;
     }
     getBrand() 
     {

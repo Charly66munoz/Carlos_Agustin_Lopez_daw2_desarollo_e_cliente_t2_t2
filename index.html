@@ -1,41 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stranger things</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="utils/css/style.css">
     <link rel="stylesheet" href="utils/css/cardsStyle.css">
+    <link rel="stylesheet" href="utils/css/filter.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
-<body >
+
+<body>
     <header class="container-fluid pt-2">
         <div class="container-fluid row">
             <div class="col-8">
-                <h1 >Stranger THINGS</h1>
+                <h1>Stranger THINGS</h1>
             </div>
-            <div class="col-4 text-end m-0">
-                <button class="btn btn-light end-0 " id="btnFileter">FILTROS</button>
-            </div>
+
         </div>
     </header>
-    <main >
-        <section class="col-12 col-lg-12">
-            <div class="row m-1 justify-content-center align-items-center" id="bodyProducts">
-                <div class="col-12 text-center">
-                    <button class="btn btn-warning mt-5" id="btnCargar">Presione para cargar los productos</button>
-                </div>
-                
-                    
+    <main>
+        <div class="container-fluid  m-0 d-none" id="filterDiv">
+            <div class="row mb-3 ">
+                <div class="col-3">
+                <ul class="menu">
+                    <li>Filtrar por:
+                        <ul class="categoryList">
+
+                            <li class="title">Categorías  
+                                <ul id="categoryFilter" class="insideList">
+                                </ul>
+                            </li>
+                        
+                            <li class="title">Marcas
+                                <ul id="brandFilter" class="insideList">
+                                </ul>
+                            </li>
+                            <li class="title" data-type="price" data-value="price">Precio</li>                                                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
             </div>
-        </section>
-        <aside class="col-12 col-lg-3 d-none" id="cartAside">
-                  fff  
-        </aside>
+                <div>
+                    <button id="btnApplyFilter" class="btn btn-warning">Aplicar filtros</button>
+                    <button id="btnClearFilter" class="btn btn-warning">Borrar filtros</button>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <section class="col-12 col-lg-12">
+                <div class="row m-1 justify-content-start align-items-center" id="bodyProducts">
+                    <div class="col-12 text-center">
+                        <button class="btn btn-warning mt-5" id="btnCargar">Presione para cargar los productos</button>
+                    </div>
+
+
+                </div>
+            </section>
+            <aside class="col-12 col-lg-3 d-none" id="cartAside">
+                <div class="container">
+                    <h5 class="text-center">Carrito:</h5>
+                    <div id="divAside"></div>
+                    <button class="btn btn-warning mt-2 container-fluid" id="comprar">Comprar</button>
+                </div>
+            </aside>
+        </div>
     </main>
-    
+
     <script src="utils/JS/entity/product.js"></script>
     <script src="utils/JS/controller/listProducts.js"></script>
+    <script src="utils/JS/controller/cart.js"></script>
     <script src="utils/JS/index.js"></script>
 </body>
+
 </html>
